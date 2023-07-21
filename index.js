@@ -1,16 +1,18 @@
 const express = require('express')
 const mongoose = require('mongoose');
+const Post = require('./Post');
+const router = require('./router');
 
 const PORT = 5000;
-const DB_URL = `mongodb://localhost:27017`
+const DB_URL = `mongodb://127.0.0.1:27017`
 
 const app = express()
 app.use(express.json())
+app.use('/api', router)
 
-app.post('/', (req, res) => {
-    console.log(req.body)
+app.post('/', async (req, res) => {
 
-    res.status(200).json('Сервер работает12')
+
 })
 
 async function startApp() {
