@@ -1,5 +1,5 @@
-const Router = require('express').Router;
-const PostController = require('./PostController');
+import Router from 'express'
+import PostController from "./PostController.js";
 
 const router = new Router();
 
@@ -9,4 +9,4 @@ router.get('/posts/:id');
 router.put('/posts');
 router.delete('/posts/:id');
 
-module.exports = router
+export default router;

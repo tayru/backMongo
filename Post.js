@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const Post = new mongoose.Schema({
     author: {type: String, required: true},
@@ -8,5 +8,4 @@ const Post = new mongoose.Schema({
 
 })
 
-module.exports = mongoose.model('Post', Post)
-
+export default mongoose.model('Post', Post)
